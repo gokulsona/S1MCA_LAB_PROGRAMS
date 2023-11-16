@@ -6,7 +6,7 @@ Step3 : push() : check if size = top-1 then stack is full else increment the top
    3.2 : display() : check if top = -1 then stack is empty nothing to show,else print stack upto top[stack]
 Step4 : Using Switch Case read user's choice and  loop the Program until exit(0) function calls
 Step5 : print the proper result
-Step6 : Stoporithm
+Step6 : Stop
 
 
 #include<stdio.h>
