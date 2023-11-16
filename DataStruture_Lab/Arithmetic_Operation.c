@@ -64,3 +64,16 @@ int divi(int num1,int num2)
 	result = num1/num2;
 	printf("Result = %d",result);
    }
+
+
+#Output 
+/*
+Enter First Number  : 25
+Enter Second Number : 12
+1.Addition
+2.Substraction
+3.Multiplication
+4.Division
+Select Option : 1
+Result = 37
+*/
