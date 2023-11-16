@@ -1,3 +1,11 @@
+#Algorithm
+Step1 : Start
+Step2 : Ask the user to enter two numbers and read it in the variables as num1,num2
+Step3 : Ask the user to select operation and read it in the variable choice
+Step4 : Using switch case call the particular function for Arithmetic Operation
+Step5 : Print Result
+Step6 : Stop
+
 #include<stdio.h>
 int result;
 int add(int,int);
