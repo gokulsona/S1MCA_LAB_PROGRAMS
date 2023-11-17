@@ -2,8 +2,8 @@
 Step1 : Start
 Step2 : Declare the variables and Functions for push,pop, and display and initially top = -1
 Step3 : push() : check if size = top-1 then stack is full else increment the top by 1 and assign element to top 
-   3.1 : pop() : check if top = -1 then stack is empty nothing to delete ,else pop top element then decrement top by 1
-   3.2 : display() : check if top = -1 then stack is empty nothing to show,else print stack upto top[stack]
+   3.1 : pop() : check if top == -1 then stack is empty nothing to delete ,else pop top element then decrement top by 1
+   3.2 : display() : check if top == -1 then stack is empty nothing to show,else print stack upto top[stack]
 Step4 : Using Switch Case read user's choice and  loop the Program until exit(0) function calls
 Step5 : print the proper result
 Step6 : Stop
