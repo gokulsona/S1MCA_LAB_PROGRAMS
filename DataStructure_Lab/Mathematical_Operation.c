@@ -12,6 +12,7 @@ int add(int,int);
 int sub(int,int);
 int multi(int,int);
 int divi(int,int);
+int mod(int,int);
 int main()
    {
 	int num1,num2,choice;
@@ -20,7 +21,7 @@ int main()
 	scanf("%d",&num1);
 	printf("Enter Second Number : ");
 	scanf("%d",&num2);
-	printf("\n1.Addition\n2.Substraction\n3.Multiplication\n4.Division\n");
+	printf("\n1.Addition\n2.Substraction\n3.Multiplication\n4.Division\n5.Modulus");
 	printf("Select Option : ");
 	scanf("%d",&choice);	
    	
@@ -37,6 +38,9 @@ int main()
 	   break;	
 	 case 4:
 	   divi(num1,num2);
+	   break;
+	 case 5:
+	   mod(num1,num2);
 	   break;
 	 default:
 	   printf("INVALID OPTION!!");
@@ -64,7 +68,11 @@ int divi(int num1,int num2)
 	result = num1/num2;
 	printf("Result = %d",result);
    }
-
+int mod(int num1,int num2)
+   {
+	result = num1%num2;
+	printf("Result = %d",result);
+   }
 
 #Output 
 /*
