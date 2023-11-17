@@ -1,3 +1,13 @@
+#Algorithm
+Step1 : Start
+Step2 : Declare the variables and Functions for push,pop, and display and initially top = -1
+Step3 : push() : check if size = top-1 then stack is full else increment the top by 1 and assign element to top 
+   3.1 : pop() : check if top = -1 then stack is empty nothing to delete ,else pop top element then decrement top by 1
+   3.2 : display() : check if top = -1 then stack is empty nothing to show,else print stack upto top[stack]
+Step4 : Using Switch Case read user's choice and  loop the Program until exit(0) function calls
+Step5 : print the proper result
+Step6 : Stop
+
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -82,3 +92,60 @@ int display()
 }
 
 
+#Output
+/*
+Stack operation...
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 1
+Enter Element into Array : 25
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 1
+Enter Element into Array : 36
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 1
+Enter Element into Array : 28
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 3
+Stack Elements :
+28
+36
+25
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 2
+
+Poped Element is 28
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 3
+Stack Elements :
+36
+25
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Select Operation : 4
+*/
