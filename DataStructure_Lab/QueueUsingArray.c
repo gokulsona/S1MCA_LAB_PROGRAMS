@@ -1,8 +1,8 @@
 #Algorithm
 Step1 : Start
 Step2 : Declare the variables and Functions for enqueue,dequeue, and display and initially front & rear = -1
-Step3 : enqueue : check if rear >= size then queue is full else increment the rear by 1 and assign element to rear 
-   3.1 : dequeue : check if rear == -1 then queue is empty nothing to delete ,else increment front by 1 and delete queue[front] element
+Step3 : enqueue() : check if rear >= size then queue is full else increment the rear by 1 and assign element to rear 
+   3.1 : dequeue() : check if rear == -1 then queue is empty nothing to delete ,else increment front by 1 and delete queue[front] element
    3.2 : display() : check if rear == -1 then squeue is empty nothing to show,else print queue upto queue[rear]
 Step4 : Using Switch Case read user's choice and  loop the Program until exit(0) function calls
 Step5 : print the proper result
