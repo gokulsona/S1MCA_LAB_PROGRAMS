@@ -70,7 +70,7 @@ int dequeue()
 	else
 	 {
 		front++;
-		printf("Popped Element is %d",queue[front]);
+		printf("Deleted Element is %d",queue[front]);
 		
 	 }
 }
@@ -117,7 +117,7 @@ Queue Elements :25	36
 3.Display
 4.Exit
 Select Operation : 2
-Popped Element is 25
+Deleted Element is 25
 1.Enqueue
 2.Dequeue
 3.Display
