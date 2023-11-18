@@ -117,7 +117,7 @@ Queue Elements :25	36
 3.Display
 4.Exit
 Select Operation : 2
-Print Popped Element is 25
+Popped Element is 25
 1.Enqueue
 2.Dequeue
 3.Display
