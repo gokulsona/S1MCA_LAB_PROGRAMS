@@ -82,6 +82,7 @@ Enter Second Number : 12
 2.Substraction
 3.Multiplication
 4.Division
+5.Modulus
 Select Option : 1
 Result = 37
 */
