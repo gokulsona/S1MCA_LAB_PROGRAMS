@@ -67,7 +67,7 @@ Algorithm:
 C)From a list of vowels selected from a given word
 step 1 : start
 step 2 : Ask the user to enter the word
-step 3 : for x in range x**2 print the perfect squares upto range
+step 3 : if vowels 'aeiou' is in the word,then print the vowel word
 step 4 : print proper result
 step 5 : stop
 
