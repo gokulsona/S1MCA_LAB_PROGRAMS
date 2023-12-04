@@ -1,0 +1,1 @@
+Aim : Create a string from a given string where first and last characters are exchanged

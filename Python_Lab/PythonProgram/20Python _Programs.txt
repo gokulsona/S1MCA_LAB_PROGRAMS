@@ -1,0 +1,611 @@
+Aim : Display Future Leap Year from current year to Final year 
+
+#Algorithm
+
+step 1 : start
+step 2 : Read current and future year from user and store it in variables
+step 3 : if year % 4 == 0 && year%100 !=0 or year%400 == 0 then Y is a leap year else not
+step 4 : print proper result
+step 5 : stop  
+
+current_year=int(input("Enter the current year : "))
+future_year=int(input("Enter the future year   : "))
+if(current_year<future_year):
+    for y in range(current_year, future_year+1):
+        if(y%4==0 and y%100!=0 or y%400==0):
+            print(y)
+       
+#Output
+Enter the Current year : 2023
+enter the future year  : 2030
+2024
+2028
+
+Result : Program Excecuted Successfully
+
+
+######################################################################################
+
+
+Aim : List comprehensiion
+    (a)Generate Positive list of numbers from a list of integers
+    (b)Square of N numbers
+    (c)From a list of vowels selected from a given word
+    (d)List ordinal value of each element of a word 
+
+A)Generate positive list of numbers from a result
+Algorithm:
+step 1 : start
+step 2 : create a list of integers
+step 3 : for x in lis if x > 0 then its a positive number else not
+step 4 : print proper result
+step 5 : stop
+ 
+l1=[1,2,-3,66,-45]
+new_l=[x for x in l1 if x>0]
+print(new_l)
+
+####################
+B)Square of N Numbers
+Algorithm:
+step 1 : start
+step 2 : Ask the user to Enter the range and read it in variable num
+step 3 : for x in range x**2 print the perfect squares upto range
+step 4 : print proper result
+step 5 : stop
+
+num=int(input("Enter the Range : "))
+square=[x**2 for x in range(0,num+1)]
+print(square)
+
+#output
+Enter the Range : 5
+[0, 1, 4, 9, 16, 25]
+
+####################
+Algorithm:
+C)From a list of vowels selected from a given word
+step 1 : start
+step 2 : Ask the user to enter the word
+step 3 : for x in range x**2 print the perfect squares upto range
+step 4 : print proper result
+step 5 : stop
+
+word = input("Enter a Word : ")
+vowels = [x for x in word if x in "aeiou"]
+print("Vowels in", word ,":" ,vowels)
+
+#output
+Enter a Word : vowels
+Vowels in vowels : ['o', 'e']
+
+#####################
+Algorithm:
+D)From a list of ordinal values of each element of a word 
+step 1 : start
+step 2 : Ask the user to enter the word
+step 3 : use ord() function, to get ordinal value
+step 4 : print proper result
+step 5 : stop
+
+word = input("Enter a Word : ")
+ordinal_values = [ord(x) for x in word]
+print("Ordinal values of ",word,":", ordinal_values)
+
+#output
+Enter a Word : python
+Ordinal values of  python : [112, 121, 116, 104, 111, 110]
+
+Result : Program Excecuted Successfully
+
+#############################################################################
+
+
+Aim : Count the Occurance of Each word in a List
+Algorithm :
+step 1 : start 
+step 2 : Ask the user to enter a line of String 
+step 3 : count the occurance of each word 
+step 4: print proper result
+step 5 : stop
+
+
+
+text = input("Enter a line of text: ")
+words = text.lower().split()
+word_counts = {}
+for word in words:
+  if word in word_counts:
+    word_counts[word] += 1
+  else:
+    word_counts[word] = 1
+print("Word counts:")
+for word, count in word_counts.items():
+  print(f"{word}: {count}")
+
+#Output
+Enter a line of text: orange is orange
+Word counts:
+orange: 2
+is: 1
+
+Result : Program Excecuted Successfully
+###########################################################################
+
+
+
+Aim : Prompt the user for a list of integers.For all values greater than 100,store 'over' instead.
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter number of elements in list
+step 3 : Ask the user to enter the integers
+step 4 : if intger > 100 then replace the value as 'over'
+step 5 : print proper result
+step 6 : stop
+
+d=[]
+num=int(input("Enter number of elements in the list : "))
+print("Enter the Elements : ")
+for i in range(0,num):
+    element=int(input())
+    d.append(element)
+for i in range(len(d)):
+    if d[i]>100:
+        d[i]="over"
+print(d)
+
+#Output
+Enter number of elements in the list : 5
+Enter the Elements : 
+100
+250
+78
+96
+150
+[100, 'over', 78, 96, 'over']
+
+Result : Program Excecuted Successfully
+
+#########################################################################
+
+
+Aim : Stores a list of First Names,count the occurance of 'a' within the list  
+#Algorithm
+step 1 : start
+step 2 : Store a list of names in fname
+step 3  Using count(),count the occurance of 'a' or 'A'
+step 4 : print proper result
+step 5 : stop 
+
+fname = ["Alice", "Bob", "Charlie", "Diana", "Eva"]
+count= 0
+for x in fname:
+  count += x.count("a")
+  count += x.count("A")
+print("Number of 'a' in first names:")
+print(count)
+
+#Output
+Number of 'a' in first names:
+5
+
+Result : Program Excecuted Successfully
+
+######################################################################
+
+
+
+Aim : Enter Two list of Integers.Check (a)Whether lists are of Same length (b)whether list sums to same value (c) whether any value occur in both
+
+Algorithm : 
+step 1 : start
+step 2 : Declare the Fuction check_list & Ask the user to Enter Elements into List1 and List2
+step 3 : using len(),if length of list1 == list2,then they are same length else not
+step 4 : Using sum(),if sum of list1 == lsit2 ,then their sums are equal else not
+step 5 : Using set() ,find the common value
+step 6 : print proper result
+step 7 : stop  
+
+Program:
+
+list1 = [int(x) for x in input("Enter Elements of the first list separated by spaces: ").split()]
+list2 = [int(x) for x in input("Enter Elements of the second list separated by spaces: ").split()]
+
+def check_lists(list1, list2):
+    if len(list1) == len(list2):
+        print("Both lists are of the same length.")
+    else:
+        print("Lists are not of the same length.")
+
+    if sum(list1) == sum(list2):
+        print("Both lists have the same sum.")
+    else:
+        print("Lists do not have the same sum.")
+
+    common_values = set(list1) & set(list2)
+    if common_values:
+        print("Common values found in both lists:", common_values)
+    else:
+        print("No common values found in both lists.")
+
+check_lists(list1, list2)
+
+Output :
+Enter Elements of the first list separated by spaces: 10 25 35 45 75
+Enter Elements of the second list separated by spaces: 10 33 35 22 75
+Both lists are of the same length.
+Lists do not have the same sum.
+Common values found in both lists: {75, 10, 35}
+
+Result : Program Excecuted Successfully
+
+##################################################################
+
+
+
+Aim : Get a String from input string where all occurance of first character replaced with '$',except first character
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter a string as str1
+step 3 : set first_char = str[0]
+step 4 : if str[0] occur again replace it with '$'
+step 5 : print proper result
+step 6 : stop
+
+#Program
+def replace_first_char(str1):
+  first_char = str1[0]
+  remaining_chars = str1[1:].replace(first_char, '$')
+  return first_char + remaining_chars
+
+str1 = input("Enter a String : ")
+print(replace_first_char(str1)) 
+
+#Output
+Enter a String : onion
+oni$n
+
+Result : Program Excecuted Successfully
+
+###############################################################
+
+
+Aim : Create a string from a given string where first and last characters are exchanged
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter a string as str1
+step 3 : set first_char = str1[0]
+step 4 : set last_char = str1[-1]
+step 5 : print modified character as last_char + str1[1:-1] + first_char
+step 6 : stop
+
+#Program
+str1 = input("Enter a String : ")
+first_char = str1[0]
+last_char = str1[-1]
+modified_string = last_char + str1[1:-1] + first_char
+print(modified_string)
+
+#Output
+Enter a String : python
+nythop
+
+Result : Program Excecuted Successfully
+
+#############################################################
+
+
+Aim : Accept Radius and find Area of circle
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter radius
+step 3 : set area = 3.14*(r*r)
+step 4 : print proper result
+step 6 : stop
+
+#Program
+radius= int(input("Enter radius of circle : "))
+area=3.14*radius*radius
+print("Area of the circle : ",area)
+
+#Output
+Enter radius of circle : 3
+Area of the circle : 28.259999999999998
+
+Result : Program Excecuted Successfully
+
+##############################################################
+
+Aim : Find Biggest of 3
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter 3 numbers as num1,num2,num3
+step 3 : Compare num1,num2 and numb3 each other
+step 4 : print proper result
+step 6 : stop
+
+#Program
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+if (num1>num2 and num1>num3):
+    print(num1 ,"is largest")
+elif( num2>num1 and num2>num3):
+    print(num2 ,"is largest")
+else:
+    print( num3," is largest")
+
+
+
+#Output
+Enter the first number: 25
+Enter the second number: 12
+Enter the third number: 8
+25 is largest
+
+Result : Program Excecuted Successfully
+
+###############################################################
+
+
+Aim : Accept a file name and print its extension
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter a Filename
+step 3 : Split the Filename from dot(.).
+step 4 : if the file has extension print extension else not
+step 5 : print proper result
+step 6 : stop
+
+#Program
+filename = input("Enter a filename: ")
+ext = filename.split(".")[-1]
+if ext:
+    print("The extension of the file is:",ext)
+else:
+    print("The file has no extension.")
+
+
+#Output
+Enter a filename : python.py
+The extension of the file is : py
+
+Result : Program Excecuted Successfully
+
+#################################################################
+
+
+Aim : Create a list of colors from comma-seperated color names entered by user.Display First and Last Colors
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter a list of color
+step 3 : print first color as color[1] and last as color[-1]
+step 4 : print proper result
+step 6 : stop
+
+#Program
+color = input("Enter color names: ")
+cname = color.split(',')
+print("First color: ", cname[0])
+print("Last color: ", cname[-1])
+
+#Output
+Enter color names : red,orange,blue,yellow
+First color :  red
+Last color  :  yellow
+
+Result : Program Excecuted Successfully
+
+##################################################################
+
+
+
+Aim : Accepts an Integer n and compute n+nn+nnn
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter a integer as n
+step 3 : compute n+(n*n)+(n*n*n)
+step 4 : print proper result
+step 6 : stop
+
+#Program
+
+n = int(input("Enter an integer : "))
+print("Result is :",n+(n*n)+(n*n*n))
+
+#Output
+Enter an integer : 3
+Result is : 39
+
+Result : Program Excecuted Successfully
+
+#############################################################
+
+Aim : print out all color set from color-list1 not contained in color-list2
+
+#Algorithm
+step 1 : start 
+step 2 : set two colorlist
+step 3 : compute set difference using set()
+step 4 : print proper result
+step 6 : stop
+
+#Program
+clist1 = ["red", "green", "blue", "purple"]
+print("Color List1 : ",clist1)
+clist2 = ["yellow", "green", "orange"]
+print("Color List2 : ",clist2)
+unique_colors = set(clist1) - set(clist2)
+print("Colors in list1 not in list2:", unique_colors)
+
+#Output
+Color List1 :  ['red', 'green', 'blue', 'purple']
+Color List2 :  ['yellow', 'green', 'orange']
+Colors in list1 not in list2: {'red', 'blue', 'purple'}
+
+Result : Program Excecuted Successfully
+
+########################################################
+
+Aim : Create a Single String seperated with space from two string by swapping the character at position 1
+
+#Algorithm
+step 1 : start 
+step 2 : Ask the user to enter two string as str1 and str2
+step 3 : if len(str1) >= 2 and len(str2) >= 2:
+	  new_str1 = str2[0] + str1[1:]
+ 	  new_str2 = str1[0] + str2[1:]
+ 	  result = new_str1 + ' ' + new_str2
+step 4 : print proper result
+step 6 : stop
+
+#Program
+str1 = input("Enter the first string : ")
+str2 = input("Enter the second string : ")
+if len(str1) >= 2 and len(str2) >= 2:
+ new_str1 = str2[0] + str1[1:]
+ new_str2 = str1[0] + str2[1:]
+ result = new_str1 + ' ' + new_str2
+ print("Resulting string after swapping characters at position 1 : ", result)
+
+
+#Output
+Enter the first string : python
+Enter the second string : java
+Resulting string after swapping characters at position 1 :  jython pava
+
+
+Result : Program Excecuted Successfully
+
+#####################################################################################
+
+Aim : Sort Dictionary in ascending and descending order
+
+#Algorithm
+step 1 : start 
+step 2 : sort dictionary in ascending as sorted.items() and descending as sorted.items(),reverse = True
+step 4 : print proper result
+step 6 : stop
+
+#Program
+d={18:'python',24:'c++',2:'html',3:'java'}
+print("orginal dictionary=", d)
+print("dictionary in ascending order by key:",sorted(d.items()))
+print("dictionary in decending order by key:",sorted(d.items(),reverse=True))
+
+#Output
+orginal dictionary= {19: 'python', 23: 'c++', 3: 'html', 4: 'java'}
+dictionary in ascending order by key: [(3, 'html'), (4, 'java'), (19, 'python'), (23, 'c++')]
+dictionary in decending order by key: [(23, 'c++'), (19, 'python'), (4, 'java'), (3, 'html')]
+
+
+Result : Program Excecuted Successfully
+
+##################################################################################
+
+
+Aim : Merge Two Dictionaries
+
+#Algorithm
+
+step 1 : start 
+step 2 : set dictionary1 and dictionary2
+step 3 : Merge Dictionary using update()
+step 4 : print proper result
+step 6 : stop
+
+#Program
+dict1 = {'apple': 10, 'banana': 20,'grapes':50}
+dict2 = {'carrot': 30, 'tomato': 40,'cabbage':60}
+print("First Dictonary    : ",dict1)
+print("Second Dictionary  : ",dict2)
+dict1.update(dict2)
+print(f"Merged dictionary : ",dict1)
+
+#Output
+First Dictonary    :  {'apple': 10, 'banana': 20, 'grapes': 50}
+Second Dictionary  :  {'carrot': 30, 'tomato': 40, 'cabbage': 60}
+Merged dictionary  :  {'apple': 10, 'banana': 20, 'grapes': 50, 'carrot': 30, 'tomato': 40, 'cabbage': 60}
+
+Result : Program Excecuted Successfully
+
+###############################################################################
+
+Aim : Find GCD of two Numbers
+
+#Algorithm
+step 1 : start 
+step 2 : ask user to enter two numbers, num1 and num2
+step 3 : i=1
+	while (i<num1 and i<num2):
+    	  if(num1%i==0 and num2%i==0):
+           if(num1%i==0 and num2%i==0):
+             gcd=i
+step 4 : print proper result
+step 6 : stop
+
+#Program
+num1 = int(input("Enter the first number  : "))
+num2 = int(input("Enter the second number : "))
+i=1
+while (i<num1 and i<num2):
+    if(num1%i==0 and num2%i==0):
+        if(num1%i==0 and num2%i==0):
+            gcd=i
+    i=i+1
+print("gcd : ",gcd)
+
+#Output
+Enter the first number  : 12
+Enter the second number : 24
+gcd :  6
+
+Result : Program Excecuted Successfully
+
+###############################################################################
+
+
+
+Aim : From a list of Integers,create a list removing even numbers
+
+step 1 : start 
+step 2 : Ask the user to enter list of numbers
+step 3 : if number%i !=0 it's a odd number,append numbers into odd[]
+step 4 : print proper result
+step 6 : stop
+
+#Program
+numbers = [int(x) for x in input("Enter a list of integers separated by spaces: ").split(',')]
+print("Orginal list is : ",numbers)
+odd=[]
+for i in numbers:
+    if(i%2 !=0):
+        odd.append(i)
+print("List without even numbers : ", odd)
+
+#Output
+Enter a list of integers separated by spaces: 25,40,28,99,15,13,2
+Orginal list is :  [25, 40, 28, 99, 15, 13, 2]
+List without even numbers :  [25, 99, 15, 13]
+
+Result : Program Excecuted Successfully
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
